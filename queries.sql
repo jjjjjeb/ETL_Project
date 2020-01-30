@@ -1,21 +1,11 @@
-CREATE TABLE countries(
-country_code TEXT PRIMARY KEY,
-country_name TEXT);
 
-CREATE TABLE indicators(
-indicator_name TEXT,
-indicator_code TEXT PRIMARY KEY);
+-- Query example:
 
-CREATE TABLE values(
-country_name TEXT,
-country_code TEXT,
-indicator_code TEXT,
-value FLOAT NOT NULL,
-year INT);
 
-SELECT values.country_name, countries.country_code, indicators.indicator_code, values.value, values.year
-FROM countries
+SELECT country.country_name, indicators.indicator_name, values.value, values.year
+FROM country
 JOIN values
-ON values.country_code = countries.country_code
+ON values.country_code = country.country_code
 JOIN indicators
-ON values.indicator_code = indicators.indicator_code;
+ON values.indicator_code = indicators.indicator_code
+LIMIT 100;
