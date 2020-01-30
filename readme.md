@@ -7,7 +7,7 @@
 
 # Github Participants:
 * @jefferyb92
-* @mariavpatino
+* @ronak-ops
 * @jjjjjeb
 * @angievizca
 
