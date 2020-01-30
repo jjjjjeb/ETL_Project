@@ -11,6 +11,8 @@
 
 * We looked into World Bank's Development Indicators to create a pipeline isolating a comprehensive data set that allows the user to compare today's world powers, Russia, China and the USA, over the past 60 years.
 
+![Fig](https://orientalreview.org/wp-content/uploads/2019/12/Integration-Models.jpg)
+
 ## Data Sources:
 Process: 
 * Kaggle → 
@@ -20,8 +22,6 @@ Process:
             * Data Catalogue
             [Data Catalogue (CSV)](https://datacatalog.worldbank.org/dataset/world-development-indicators)
 
-
-![Fig](https://orientalreview.org/wp-content/uploads/2019/12/Integration-Models.jpg)
 
 ## Extraction: 
 We extracted the API data for country and indicator values from 2015-2019 from the Data Help Deck at World Bank's Website.  We used python modules requests, json and Beautiful Soup.  
