@@ -1,4 +1,4 @@
-# ETL Process
+# ETL Process: WDI - World Powers ETL
 ## Project 2, Group 5
 
 ### Github Participants:
@@ -9,7 +9,7 @@
 
 ## Project:
 
-* We looked into World Bank's development indicators to create a pipeline isolating a comprehensive and current data set that allows the user to compare Russia, China, and the USA. 
+* We looked into World Bank's Development Indicators to create a pipeline isolating a comprehensive data set that allows the user to compare today's world powers, Russia, China and the USA, over the past 60 years.
 
 ## Data Sources:
 Process: 
