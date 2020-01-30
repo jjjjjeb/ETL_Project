@@ -26,18 +26,23 @@ Process:
 ![Fig](https://orientalreview.org/wp-content/uploads/2019/12/Integration-Models.jpg)
 
 ## Extraction: 
-Extract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
+We extracted the API data for country and indicator values from 2015-2019 from the Data Help Deck at World Bank's Website.  We used python modules requests, json and Beautiful Soup.  
+
+We pulled the indicator values CSV table from the World Bank's Data Catalogue  for historical values for the indicators, from 1960 to 2015. For this we simply used pandas to read the CSV file.
 
 ## Transformation:
-The type of transformation needed for this data (cleaning, joining, filtering, aggregating, etc).
-Transform: what data cleaning or transformation was required.
+In the case of the API's we transformed our datasets by looping and appending desired information into lists and using pandas to create a DataFrame.
 
+We cleaned the dataset by renaming and dropping columns and empty values.
+
+We also used functions like loc, zip, and concat to filter and combine the information we needed into normalized dataframes ready loading into a sequel table. 
 
 ## Loading:
-The type of final production database to load the data into (relational or non-relational).
+We chose postgres for the final production database. The dataset values were strings, floats, and integers and we felt the simplicity and predictability of the dataset was appropriate for a sequel server.
 
-The final tables or collections that will be used in the production database.
+We transformed our data into three tables:
+1. A 'country' table with the country name and country code, a primary key.
+2. A 'indicator' table with the indicator name's and indicator codes, also a primary key
+3. A 'values' table with the country code (foreign key), indicator code (foreign key), the listed values (a float), and the year (an integer).
 
-Load: the final database, tables/collections, and why this was chosen.
-
-Please upload the report to Github and submit a link to Bootcampspot.
+Our production team will be able to pull information using queries from the cleaned dataset to compare the three countries, or one country to the other quite easily. 
